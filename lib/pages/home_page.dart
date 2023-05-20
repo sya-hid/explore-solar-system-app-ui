@@ -66,9 +66,9 @@ class _HomePageState extends State<HomePage> {
   prevPlanet() {
     if (direction == 'prev') {
       if ((currentIndex % planets.length) % 2 == 0) {
-        planet2 = (planet2 - 1) % planets.length;
+        planet2 = (planet2 - 2) % planets.length;
       } else {
-        planet1 = (planet1 - 1) % planets.length;
+        planet1 = (planet1 - 2) % planets.length;
       }
     } else {
       setState(() {
@@ -290,16 +290,16 @@ class _HomePageState extends State<HomePage> {
                               alignment: Alignment.center,
                               angle: -angle * pi / 180,
                               child: AnimatedOpacity(
-                                  opacity:
-                                      angle.abs() > 180 && angle.abs() <= 360
-                                          ? angle.abs() / 360
-                                          : angle.abs() < 180
-                                              ? (180 - angle.abs()) / 180
-                                              : 0,
-                                  duration: const Duration(milliseconds: 900),
-                                  child: PlanetItem(
-                                      image: planets[planet1 % planets.length]
-                                          .image!)),
+                                opacity: angle.abs() > 180 && angle.abs() <= 360
+                                    ? angle.abs() / 360
+                                    : angle.abs() < 180
+                                        ? (180 - angle.abs()) / 180
+                                        : 0,
+                                duration: const Duration(milliseconds: 900),
+                                child: PlanetItem(
+                                    image: planets[planet1 % planets.length]
+                                        .image!),
+                              ),
                             ),
                           ),
                           //2
