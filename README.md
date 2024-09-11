@@ -27,3 +27,4 @@
 <img src="assets/previews/home page 2.png" alt="Home Page" width="200">
 <img src="assets/previews/detail page.png" alt="Detail Page" width="200">
 </p>
+<img src="https://visitor-badge.laobi.icu/badge?page_id=sya-hid.explore-solar-system-app-ui"/>  
